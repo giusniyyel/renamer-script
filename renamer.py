@@ -6,7 +6,7 @@ def sorted_alphanumeric(data):
     alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
     return sorted(data, key=alphanum_key)
 
-file_with_folios = open('folios.txt', 'r')
+file_with_folios = open('folios.txt', mode='r', encoding='utf-8')
 folios_list = file_with_folios.readlines()
 
 certificates_dir = './certs'
